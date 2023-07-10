@@ -1,6 +1,6 @@
 import React from "react";
 
-function MenuBar(props) {
+function MenuBar({selected, handleSelected}) {
   /*
 
   The 'span' tags below are the menu items. Think about the way a menu 
@@ -12,21 +12,22 @@ function MenuBar(props) {
 
   */
 
+
   return (
     <div className="ui four item menu">
-      <span className="item active">
+      <span className="item active" onClick={() => handleSelected('Profile') }>
         <i className="user large icon" />
       </span>
 
-      <span className="item">
+      <span className="item" onClick={() => handleSelected('Photos')}>
         <i className="photo large icon" />
       </span>
 
-      <span className="item">
+      <span className="item" onClick={() => handleSelected('Cocktails')}>
         <i className="cocktail large icon" />
       </span>
 
-      <span className="item">
+      <span className="item" onClick={() => handleSelected('Pokemon')}>
         <i className=" themeisle large icon" />
       </span>
     </div>
@@ -34,3 +35,4 @@ function MenuBar(props) {
 }
 
 export default MenuBar;
+
